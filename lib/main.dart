@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/ui/landing_page.dart';
+import 'package:flutter_application_1/ui/login_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'PakTani',
-      home: LandingPage(),
+      home: LoginPage(),
     );
   }
 }

@@ -87,6 +87,14 @@ class LandingPage extends StatelessWidget {
                 ],
               ),
             ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                height: 300,
+                color: Colors.white,
+                child: Center(child: Text("2022 all right reserved")),
+              ),
+            ),
           ],
         ),
       ),
