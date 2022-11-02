@@ -15,7 +15,7 @@ class LandingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(60),
+        preferredSize: const Size.fromHeight(60),
         child: CustomAppbar(),
       ),
       body: SafeArea(
@@ -26,7 +26,7 @@ class LandingPage extends StatelessWidget {
               child: Container(
                 height: 300,
                 color: Colors.blue,
-                child: Center(child: Text("carousel")),
+                child: const Center(child: Text("carousel")),
               ),
             ),
             Padding(
@@ -34,51 +34,51 @@ class LandingPage extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Expanded(
+                  const Expanded(
                     child: Card(
                       color: Colors.blue,
-                      child: Container(
+                      child: SizedBox(
                         height: 180,
                         width: 280,
                         child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: EdgeInsets.all(8.0),
                           child: Text("Product Quality"),
                         ),
                       ),
                     ),
                   ),
-                  Expanded(
+                  const Expanded(
                     child: Card(
                       color: Colors.blue,
-                      child: Container(
+                      child: SizedBox(
                         height: 180,
                         width: 280,
                         child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: EdgeInsets.all(8.0),
                           child: Text("Quick Service"),
                         ),
                       ),
                     ),
                   ),
-                  Expanded(
+                  const Expanded(
                     child: Card(
-                      child: Container(
+                      child: SizedBox(
                         height: 180,
                         width: 280,
                         child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: EdgeInsets.all(8.0),
                           child: Text("Stay Fresh"),
                         ),
                       ),
                     ),
                   ),
-                  Expanded(
+                  const Expanded(
                     child: Card(
-                      child: Container(
+                      child: SizedBox(
                         height: 180,
                         width: 280,
                         child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: EdgeInsets.all(8.0),
                           child: Text("Socially Responsible Business"),
                         ),
                       ),
@@ -92,7 +92,7 @@ class LandingPage extends StatelessWidget {
               child: Container(
                 height: 300,
                 color: Colors.white,
-                child: Center(child: Text("2022 all right reserved")),
+                child: const Center(child: Text("2022 all right reserved")),
               ),
             ),
           ],
