@@ -1,56 +1,55 @@
 import 'package:flutter/material.dart';
 
 class CustomAppbar extends StatefulWidget {
+  const CustomAppbar({super.key});
+
   @override
   State<CustomAppbar> createState() => _CustomAppbarState();
 }
 
 class _CustomAppbarState extends State<CustomAppbar> {
-  final List _isHovering = [false, false, false, false];
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.green,
+      title: Text("PakTani"),
       actions: [
-        TextButton(
-          onPressed: (() {}),
-          onHover: (value) {
-            _isHovering[0] = value;
-          },
-          child: Text(
-            "Home",
-            style: TextStyle(
-              color: _isHovering[0] ? Colors.black : Colors.green,
+        Padding(
+          padding: const EdgeInsets.all(8),
+          child: Center(
+            child: TextButton(
+              onPressed: () {},
+              child: Text(
+                'homepage',
+                style: TextStyle(color: Colors.white),
+              ),
             ),
           ),
-        ), //homepage
-        TextButton(
-          onPressed: (() {}),
-          child: Text(
-            "Delivery",
-            style: TextStyle(
-              color: _isHovering[1] ? Colors.green : Colors.black,
+        ),
+        Padding(
+          padding: const EdgeInsets.all(8),
+          child: Center(
+            child: TextButton(
+              onPressed: () {},
+              child: Text(
+                'keranjang',
+                style: TextStyle(color: Colors.white),
+              ),
             ),
           ),
-        ), //delivery
-        TextButton(
-          onPressed: (() {}),
-          child: Text(
-            "Order",
-            style: TextStyle(
-              color: _isHovering[2] ? Colors.green : Colors.black,
+        ),
+        Padding(
+          padding: const EdgeInsets.all(8),
+          child: Center(
+            child: TextButton(
+              onPressed: () {},
+              child: Text(
+                'akun',
+                style: TextStyle(color: Colors.white),
+              ),
             ),
           ),
-        ), //order
-        TextButton(
-          onPressed: (() {}),
-          child: Text(
-            "About",
-            style: TextStyle(
-              color: _isHovering[3] ? Colors.green : Colors.black,
-            ),
-          ),
-        ), //profile
+        ),
       ],
     );
   }

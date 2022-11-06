@@ -20,7 +20,9 @@ class _loginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(),
+        appBar: AppBar(
+          title: Text("PakTani"),
+        ),
         body: Consumer<UserProvider>(builder: (context, value, child) {
           return Stack(
             children: <Widget>[
@@ -29,7 +31,17 @@ class _loginPageState extends State<LoginPage> {
                 width: MediaQuery.of(context).size.width,
                 color: Colors.black38,
               ),
-
+              Center(
+                child: Container(
+                  height: 600,
+                  width: 500,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: const LoginForm(),
+                ),
+              ),
               /*
                 Padding(
                   padding: const EdgeInsets.fromLTRB(20, 60, 0, 0),
@@ -68,17 +80,6 @@ class _loginPageState extends State<LoginPage> {
                     ]),
                   ),
                 ),*/
-              Center(
-                child: Container(
-                  height: 600,
-                  width: 500,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: const LoginForm(),
-                ),
-              ),
             ],
           );
         }));

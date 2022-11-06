@@ -1,4 +1,4 @@
-class Product {
+class ProductModel {
   final int id;
   final String title;
   final dynamic price;
@@ -6,7 +6,7 @@ class Product {
   final String category;
   final String image;
 
-  Product({
+  ProductModel({
     required this.id,
     required this.title,
     required this.price,
@@ -15,8 +15,8 @@ class Product {
     required this.image,
   });
 
-  factory Product.fromJson(Map<String, dynamic> json) {
-    return Product(
+  factory ProductModel.fromJson(Map<String, dynamic> json) {
+    return ProductModel(
         id: json['id'],
         title: json['title'],
         price: json['price'],
@@ -24,4 +24,32 @@ class Product {
         category: json['category'],
         image: json['image']);
   }
+  Map<String, dynamic> toJson() => {
+        "id": id,
+        "title": title,
+        "price": price,
+        "description": description,
+        "category": category,
+        "image": image,
+      };
+  ProductModel toEntity() {
+    return ProductModel(
+      id: this.id,
+      title: this.title,
+      price: this.price,
+      description: this.description,
+      category: this.category,
+      image: this.image,
+    );
+  }
+
+  @override
+  List<Object?> get props => [
+        id,
+        title,
+        price,
+        description,
+        category,
+        image,
+      ];
 }
