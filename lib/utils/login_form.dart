@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/ui/product_page.dart';
+import 'package:flutter_application_1/ui/register_page.dart';
 
 class LoginForm extends StatefulWidget {
   const LoginForm({Key? key}) : super(key: key);
@@ -37,7 +39,6 @@ class _LoginFormState extends State<LoginForm> {
           child: Text(
             'Welcome',
             style: TextStyle(
-            
               fontSize: 36,
               fontWeight: FontWeight.w600,
             ),
@@ -102,9 +103,7 @@ class _LoginFormState extends State<LoginForm> {
           height: 10,
         ),
         TextButton(
-          onPressed: () {
-           
-          },
+          onPressed: () {},
           child: const Text('Forgot password'),
         ),
         Row(
@@ -113,7 +112,12 @@ class _LoginFormState extends State<LoginForm> {
             const Text('Belum memiliki akun?'),
             TextButton(
               onPressed: () {
-                
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => RegisterPage(),
+                  ),
+                );
               },
               child: const Text('Daftar'),
             ),
@@ -128,9 +132,12 @@ class _LoginFormState extends State<LoginForm> {
           height: 40,
           child: ElevatedButton(
             child: const Text('Login'),
-            onPressed: () {
-           
-            },
+            onPressed: () { Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ProductPage(),
+                  ),
+                );},
           ),
         ),
       ],

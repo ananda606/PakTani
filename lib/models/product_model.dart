@@ -4,7 +4,7 @@ class ProductModel {
   final dynamic price;
   final String description;
   final String category;
-  final String image;
+  final List<String> imageUrls;
 
   ProductModel({
     required this.id,
@@ -12,7 +12,7 @@ class ProductModel {
     required this.price,
     required this.description,
     required this.category,
-    required this.image,
+    required this.imageUrls,
   });
 
   factory ProductModel.fromJson(Map<String, dynamic> json) {
@@ -22,7 +22,7 @@ class ProductModel {
         price: json['price'],
         description: json['description'],
         category: json['category'],
-        image: json['image']);
+        imageUrls: json['image_urls']);
   }
   Map<String, dynamic> toJson() => {
         "id": id,
@@ -30,7 +30,7 @@ class ProductModel {
         "price": price,
         "description": description,
         "category": category,
-        "image": image,
+        "image": imageUrls,
       };
   ProductModel toEntity() {
     return ProductModel(
@@ -39,7 +39,7 @@ class ProductModel {
       price: this.price,
       description: this.description,
       category: this.category,
-      image: this.image,
+      imageUrls: this.imageUrls,
     );
   }
 
@@ -50,6 +50,6 @@ class ProductModel {
         price,
         description,
         category,
-        image,
+        imageUrls,
       ];
 }

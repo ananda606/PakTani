@@ -1,8 +1,19 @@
 import 'package:flutter/material.dart';
 
 class HorizontalProduct extends StatelessWidget {
-  const HorizontalProduct({super.key});
-
+  HorizontalProduct({
+    super.key,
+    this.icon,
+    required this.imageLink,
+    required this.productName,
+    required this.productPrice,
+    required this.shopLocation,
+  });
+  IconData? icon;
+  String imageLink;
+  String productName;
+  String productPrice;
+  String shopLocation;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -16,7 +27,7 @@ class HorizontalProduct extends StatelessWidget {
             child: Container(
               width: 160.0,
               decoration: BoxDecoration(
-                color: Colors.red,
+                color: Colors.green,
                 borderRadius: BorderRadius.circular(10),
               ),
               child: Column(
@@ -24,7 +35,7 @@ class HorizontalProduct extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Center(
-                    child: Text("image"),
+                    child: Text(imageLink),
                   ),
                   Divider(
                     color: Colors.black,
@@ -45,15 +56,15 @@ class HorizontalProduct extends StatelessWidget {
                           ),*/
                   Padding(
                     padding: const EdgeInsets.fromLTRB(8, 0, 0, 0),
-                    child: Text("nama produk"),
+                    child: Text(productName),
                   ),
                   Padding(
                     padding: const EdgeInsets.fromLTRB(8, 0, 0, 0),
-                    child: Text("desc"),
+                    child: Text(productPrice),
                   ),
                   Padding(
                     padding: const EdgeInsets.fromLTRB(8, 0, 0, 0),
-                    child: Text("harga"),
+                    child: Text(shopLocation),
                   ),
                 ],
               ),
