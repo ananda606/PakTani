@@ -3,6 +3,7 @@ import 'package:flutter_application_1/provider/product_provider.dart';
 import 'package:flutter_application_1/provider/user_provider.dart';
 import 'package:flutter_application_1/utils/carousel_list.dart';
 import 'package:flutter_application_1/utils/custom_appbar.dart';
+import 'package:flutter_application_1/utils/ecommerce_template.dart';
 import 'package:flutter_application_1/utils/text_icon.dart';
 import 'package:flutter_application_1/utils/product_list_horizontal.dart';
 import 'package:flutter_application_1/utils/product_list_vertical.dart';
@@ -15,6 +16,16 @@ class ProductPage extends StatefulWidget {
 }
 
 class _ProductPageState extends State<ProductPage> {
+  late String searchString;
+  @override
+  void initState() {
+    searchString = '';
+    super.initState();
+  }
+
+  void setSearchString(String value) => setState(() {
+        searchString = value;
+      });
   @override
   Widget build(BuildContext context) {
     print("render");
@@ -32,6 +43,10 @@ class _ProductPageState extends State<ProductPage> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: SearchBar(onChanged: setSearchString),
+                ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
@@ -91,39 +106,57 @@ class _ProductPageState extends State<ProductPage> {
 
                       //menu kategori dan top up
                       Expanded(
-                        child: Container(
-                          color: Colors.blue,
-                          height: 200,
-                          width: MediaQuery.of(context).size.width / 2,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Text(
-                                  "Top Up & Tagihan",
-                                  style: TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+                            color: Colors.blue,
+                            height: 300,
+                            width: 400,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Text(
+                                    "Top Up ",
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                    ),
                                   ),
                                 ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Container(
-                                  height: 80,
-                                  width: 100,
-                                  decoration: BoxDecoration(
-                                    color: Colors.green,
-                                    borderRadius: BorderRadius.circular(10),
-                                  ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Text("pulse"),
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Container(
+                                    height: 80,
+                                    width:
+                                        MediaQuery.of(context).size.width / 3,
+                                    decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    child: Row(
+                                      children: [
+                                        Padding(
+                                          padding: const EdgeInsets.all(8.0),
+                                          child:
+                                              Icon(Icons.monetization_on_sharp),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.all(8.0),
+                                          child: Text("Gopay"),
+                                        ),
+                                        Spacer(),
+                                        Padding(
+                                          padding: const EdgeInsets.all(8.0),
+                                          child: Text("Rp 100000"),
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ),
-                              )
-                            ],
+                              ],
+                            ),
                           ),
                         ),
                       ),

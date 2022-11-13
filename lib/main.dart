@@ -9,7 +9,7 @@ import 'package:flutter_application_1/ui/landing_page.dart';
 import 'package:flutter_application_1/ui/login_page.dart';
 import 'package:flutter_application_1/ui/profile/user_profile_page.dart';
 import 'package:flutter_application_1/ui/register_page.dart';
-import 'package:flutter_application_1/ui/keranjang.dart';
+import 'package:flutter_application_1/ui/keranjang_page.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_application_1/ui/homescreen.dart';
 import 'package:flutter_application_1/ui/product_page.dart';
@@ -49,7 +49,7 @@ class MyApp extends StatelessWidget {
             PointerDeviceKind.unknown
           },
         ),
-        home: ProductPage(),
+        home: KeranjangPage(),
       ),
     );
   }
