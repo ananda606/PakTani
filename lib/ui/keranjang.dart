@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/utils/custom_appbar.dart';
 
-class keranjang extends StatelessWidget {
+class KeranjangPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: PreferredSize(
+            preferredSize: Size.fromHeight(60), child: CustomAppbar()),
       body: ListView(
         children: [
           Text('Keranjang'),

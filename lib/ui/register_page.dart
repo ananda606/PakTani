@@ -1,6 +1,7 @@
 import 'package:flutter_application_1/provider/user_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_application_1/utils/custom_appbar.dart';
 
 class RegisterPage extends StatefulWidget {
   @override
@@ -33,7 +34,8 @@ class _RegisterPageState extends State<RegisterPage> {
   Widget build(BuildContext context) {
     print("rendering");
     return Scaffold(
-      appBar: AppBar(),
+      appBar: PreferredSize(
+            preferredSize: Size.fromHeight(60), child: CustomAppbar(),),
       body: Consumer<UserProvider>(
         builder: (context, value, child) {
           return ListView(

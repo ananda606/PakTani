@@ -50,7 +50,16 @@ class VerticalProduct extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Text(imageLink),
+                      Center(
+                        child: Container(
+                          height: 60,
+                          width: 60,
+                          child: Image.network(
+                            imageLink,
+                            fit: BoxFit.contain,
+                          ),
+                        ),
+                      ),
                       Divider(
                         height: 10,
                       ),

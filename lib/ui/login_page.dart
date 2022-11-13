@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/utils/custom_appbar.dart';
 
 import 'package:flutter_application_1/utils/login_form.dart';
 import 'package:provider/provider.dart';
@@ -20,9 +21,8 @@ class _loginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text("PakTani"),
-        ),
+        appBar: PreferredSize(
+            preferredSize: Size.fromHeight(60), child: CustomAppbar()),
         body: Consumer<UserProvider>(builder: (context, value, child) {
           return Stack(
             children: <Widget>[

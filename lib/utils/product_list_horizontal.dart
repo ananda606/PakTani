@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 
 class HorizontalProduct extends StatelessWidget {
@@ -26,16 +28,25 @@ class HorizontalProduct extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Container(
               width: 160.0,
+             
               decoration: BoxDecoration(
-                color: Colors.green,
+                
                 borderRadius: BorderRadius.circular(10),
+              border: Border()
               ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Center(
-                    child: Text(imageLink),
+                    child: Container(
+                      height: 100,
+                      width: 60,
+                      child: Image.network(
+                        imageLink,
+                        fit: BoxFit.contain,
+                      ),
+                    ),
                   ),
                   Divider(
                     color: Colors.black,
