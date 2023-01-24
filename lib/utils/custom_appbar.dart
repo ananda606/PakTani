@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/ui/keranjang_page.dart';
+import 'package:flutter_application_1/presentation/ui/keranjang_page.dart';
+import 'package:flutter_application_1/presentation/ui/product_page.dart';
 import 'package:flutter_application_1/utils/ecommerce_template.dart';
-import 'package:flutter_application_1/ui/profile/user_profile_page.dart';
+import 'package:flutter_application_1/presentation/ui/profile/user_profile_page.dart';
 
 class CustomAppbar extends StatefulWidget {
   const CustomAppbar({super.key});
@@ -14,6 +15,7 @@ class _CustomAppbarState extends State<CustomAppbar> {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      automaticallyImplyLeading: false,
       backgroundColor: Colors.green,
       title: Text("PakTani"),
       actions: [
@@ -23,7 +25,7 @@ class _CustomAppbarState extends State<CustomAppbar> {
             child: TextButton(
               onPressed: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => HomeScreen()));
+                    MaterialPageRoute(builder: (context) => ProductPage()));
               },
               child: Text(
                 'homepage',
@@ -52,10 +54,8 @@ class _CustomAppbarState extends State<CustomAppbar> {
           child: Center(
             child: TextButton(
               onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => UserProfilePage()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => UserProfilePage()));
               },
               child: Text(
                 'akun',

@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:provider/provider.dart';
-import 'package:flutter_application_1/models/todo_model.dart';
+import 'package:flutter_application_1/data/models/todo_model.dart';
 
 class TodoProvider with ChangeNotifier {
   List<TodoModel> _todolist = [];

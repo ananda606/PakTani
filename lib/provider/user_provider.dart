@@ -1,7 +1,7 @@
 import 'dart:html';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/models/user_model.dart';
+import 'package:flutter_application_1/data/models/user_model.dart';
 
 class UserProvider with ChangeNotifier {
   List<UserModel> _userList = [];

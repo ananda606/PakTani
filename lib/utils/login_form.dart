@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/ui/product_page.dart';
-import 'package:flutter_application_1/ui/register_page.dart';
+import 'package:flutter_application_1/presentation/ui/product_page.dart';
+import 'package:flutter_application_1/presentation/ui/register_page.dart';
 
 class LoginForm extends StatefulWidget {
   const LoginForm({Key? key}) : super(key: key);
@@ -132,12 +132,14 @@ class _LoginFormState extends State<LoginForm> {
           height: 40,
           child: ElevatedButton(
             child: const Text('Login'),
-            onPressed: () { Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => ProductPage(),
-                  ),
-                );},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ProductPage(),
+                ),
+              );
+            },
           ),
         ),
       ],

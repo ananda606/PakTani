@@ -1,4 +1,4 @@
-import 'package:flutter_application_1/models/product_model.dart';
+import 'package:flutter_application_1/data/models/product_model.dart';
 //contoh data
 /*
 List<ProductModel> products = [

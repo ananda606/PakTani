@@ -1,22 +1,21 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+//import 'package:flutter/services.dart';
 import 'package:flutter_application_1/provider/product_provider.dart';
-import 'package:flutter_application_1/ui/profile/admin_profile_page.dart';
+import 'package:flutter_application_1/presentation/ui/profile/admin_profile_page.dart';
 import 'package:flutter_application_1/provider/todo_provider.dart';
 import 'package:flutter_application_1/provider/user_provider.dart';
-import 'package:flutter_application_1/ui/landing_page.dart';
-import 'package:flutter_application_1/ui/login_page.dart';
-import 'package:flutter_application_1/ui/profile/user_profile_page.dart';
-import 'package:flutter_application_1/ui/register_page.dart';
-import 'package:flutter_application_1/ui/keranjang_page.dart';
+import 'package:flutter_application_1/presentation/ui/landing_page.dart';
+import 'package:flutter_application_1/presentation/ui/login_page.dart';
+import 'package:flutter_application_1/presentation/ui/profile/user_profile_page.dart';
+import 'package:flutter_application_1/presentation/ui/register_page.dart';
+import 'package:flutter_application_1/presentation/ui/keranjang_page.dart';
 import 'package:provider/provider.dart';
-import 'package:flutter_application_1/ui/homescreen.dart';
-import 'package:flutter_application_1/ui/product_page.dart';
-import 'package:flutter_application_1/ui/test_page.dart';
-import 'package:flutter_application_1/ui/user_account.dart';
+import 'package:flutter_application_1/presentation/ui/homescreen.dart';
+import 'package:flutter_application_1/presentation/ui/product_page.dart';
+//import 'package:flutter_application_1/ui/test_page.dart';
 import 'package:flutter_application_1/utils/ecommerce_template.dart';
-import 'package:flutter_application_1/ui/detail_product_page.dart';
+import 'package:flutter_application_1/presentation/ui/detail_product_page.dart';
 
 void main() {
   runApp(MyApp());
